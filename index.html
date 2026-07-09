@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wedgie — How long can you keep it up?</title>
+  <meta name="description" content="Wedgie is a real-time golf ball juggle counter for iOS. Point your phone at yourself, juggle on your wedge, and watch the count climb. Join the waitlist." />
+  <meta property="og:title" content="Wedgie — How long can you keep it up?" />
+  <meta property="og:description" content="A real-time golf ball juggle counter for iOS. Join the waitlist." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="favicon.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <div class="ball" aria-hidden="true"></div>
+    <h1 class="title">Wedgie</h1>
+    <p class="tagline">How long can you keep it up?</p>
+    <p class="subhead">
+      Point your phone at yourself, juggle a golf ball on your wedge, and
+      watch the count climb in real time. Coming soon to iOS.
+    </p>
+
+    <form id="waitlist-form" class="waitlist-form" novalidate>
+      <div class="honeypot" aria-hidden="true">
+        <label for="company">Company</label>
+        <input type="text" id="company" name="company" tabindex="-1" autocomplete="off" />
+      </div>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        class="email-input"
+        placeholder="you@email.com"
+        required
+        aria-label="Email address"
+      />
+      <button type="submit" class="submit-button">Join the waitlist</button>
+    </form>
+    <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+
+    <footer class="footer">
+      <p>&copy; 2026 Wedgie &middot; We'll only email you about launch. Unsubscribe anytime.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
