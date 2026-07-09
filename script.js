@@ -7,10 +7,11 @@ function isHoneypotFilled(value) {
   return value.trim().length > 0;
 }
 
-function buildFormBody(email, source) {
+function buildFormBody(email, source, userGroup) {
   const params = new URLSearchParams();
   params.set("email", email.trim());
   params.set("source", source);
+  params.set("userGroup", userGroup);
   return params.toString();
 }
 
@@ -54,7 +55,7 @@ function initWaitlistForm(doc) {
     fetch(loopsEndpoint(LOOPS_FORM_ID), {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: buildFormBody(emailInput.value, "waitlist-website"),
+      body: buildFormBody(emailInput.value, "waitlist-website", "wedgie"),
     })
       .then(function (response) {
         return response.json().then(function (data) {

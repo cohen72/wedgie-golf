@@ -23,9 +23,9 @@ test("isHoneypotFilled is true when a bot fills the hidden field", () => {
   assert.equal(isHoneypotFilled("some spam text"), true);
 });
 
-test("buildFormBody url-encodes the email and includes source", () => {
-  const body = buildFormBody("oren+test@example.com", "waitlist-website");
-  assert.equal(body, "email=oren%2Btest%40example.com&source=waitlist-website");
+test("buildFormBody url-encodes the email and includes source and userGroup", () => {
+  const body = buildFormBody("oren+test@example.com", "waitlist-website", "wedgie");
+  assert.equal(body, "email=oren%2Btest%40example.com&source=waitlist-website&userGroup=wedgie");
 });
 
 test("loopsEndpoint builds the newsletter-form URL from a form id", () => {
