@@ -18,9 +18,7 @@ function loopsEndpoint(formId) {
   return "https://app.loops.so/api/newsletter-form/" + formId;
 }
 
-// Replace with the real Form ID from https://app.loops.so/forms once the
-// "Wedgie Waitlist" form is created — see README.md "Loops setup".
-var LOOPS_FORM_ID = "REPLACE_WITH_LOOPS_FORM_ID";
+var LOOPS_FORM_ID = "cmrd64hdf0pka0jzvw5x4qegn";
 
 function showMessage(el, type, text) {
   el.textContent = text;
